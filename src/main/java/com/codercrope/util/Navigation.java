@@ -4,13 +4,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.codercrope.util.Windows.WINDOW01;
-import static com.codercrope.util.Windows.WINDOW02;
+import static com.codercrope.util.Windows.*;
 
 public class Navigation {
     public HashMap<Windows, Stage> windows;
@@ -28,47 +28,65 @@ public class Navigation {
         stage.setScene(new Scene(root1));
         windows.put(WINDOW01,stage);
         stage.show();*/
-        navigate(WINDOW01);
+        navigate(LOGIN);
     }
 
     public void navigate(Windows window) throws IOException {
         switch (window){
-            case WINDOW01:
-                if (windows.containsKey(WINDOW01)) {
+            case LOGIN:
+                if (windows.containsKey(LOGIN)) {
                     System.out.println("returning the previous made window 1");
-                    windows.get(WINDOW01).show();
-                    closeWindowsExcept(WINDOW01);
+                    windows.get(LOGIN).show();
+                    closeWindowsExcept(LOGIN);
                 }else{
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
+                    initWindow("Login.fxml",LOGIN);
+                   // windows.get(LOGIN).initStyle(StageStyle.UNIFIED);
+                    /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/Login.fxml"));
                     Parent root1 = (Parent) fxmlLoader.load();
                     //((ItemMoreDetailViewController) fxmlLoader.getController()).getObject(item.getOb());
                     System.out.println("Initializing the window 1 ");
                     Stage stage = new Stage();
                     stage.setTitle("Window main");
+                    stage.initStyle(StageStyle.UNDECORATED);
                     stage.setScene(new Scene(root1));
-                    windows.put(WINDOW01,stage);
+                    windows.put(LOGIN,stage);
                     stage.show();
-                    closeWindowsExcept(WINDOW01);
+                    closeWindowsExcept(LOGIN);*/
                 }
                 break;
-            case WINDOW02:
-                if (windows.containsKey(WINDOW02)) {
+            case RESET_PWD:
+                if (windows.containsKey(RESET_PWD)) {
                     System.out.println("returning the previous made window 2");
-                    windows.get(WINDOW02).show();
+                    windows.get(RESET_PWD).show();
                 }else{
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/codercrope/view/Window2View.fxml"));
+                    initWindow("ResetPwd.fxml",RESET_PWD);
+                    /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ResetPwd.fxml"));
                     Parent root1 = (Parent) fxmlLoader.load();
                     //((ItemMoreDetailViewController) fxmlLoader.getController()).getObject(item.getOb());
-                    System.out.println("Initializing the window 2 ");
+                    System.out.println("Initializing reset pwd 2 ");
                     Stage stage = new Stage();
                     stage.setTitle("Window2");
                     stage.setScene(new Scene(root1));
-                    windows.put(WINDOW02,stage);
+                    windows.put(RESET_PWD,stage);
                     stage.show();
-                    closeWindowsExcept(WINDOW02);
+                    closeWindowsExcept(RESET_PWD);*/
                 }
                 break;
         }
+    }
+
+    private void initWindow(String location, Windows window) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/"+location));
+        Parent root1 = (Parent) fxmlLoader.load();
+        //((ItemMoreDetailViewController) fxmlLoader.getController()).getObject(item.getOb());
+        //System.out.println("Initializing the window 1 ");
+        Stage stage = new Stage();
+        stage.setTitle("Window");
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(new Scene(root1));
+        windows.put(window,stage);
+        stage.show();
+        closeWindowsExcept(window);
     }
 
     private void closeWindowsExcept(Windows window) {

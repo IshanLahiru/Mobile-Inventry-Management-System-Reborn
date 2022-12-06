@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+
+
+<TextField fx:id="txt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onAction="#txtOnAction" onKeyReleased="#txtKeyRelesedEvent" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codercrope.controler.components.text.txt.TxtFieldController" />

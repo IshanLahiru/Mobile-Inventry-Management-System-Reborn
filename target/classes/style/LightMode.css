@@ -1,0 +1,16 @@
+.btn-login{
+    -fx-background-radius: 10px;
+    -fx-background-color:  #366DDA;
+    -fx-border-radius: 10px;
+    -fx-border-color: #366DDA;
+    -fx-border-width: 2px;
+    -fx-text-color: #FFFFFF;
+}
+.btn-login:hover{
+    -fx-background-radius: 10px;
+    -fx-background-color:  #4F84EC;
+    -fx-border-radius: 10px;
+    -fx-border-color: #4F84EC;
+    -fx-border-width: 2px;
+    -fx-text-color: #FFFFFF;
+}
