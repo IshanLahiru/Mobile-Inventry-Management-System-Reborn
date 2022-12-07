@@ -82,7 +82,7 @@ public class Navigation {
         //System.out.println("Initializing the window 1 ");
         Stage stage = new Stage();
         stage.setTitle("Window");
-        stage.initStyle(StageStyle.UNDECORATED);
+       // stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(new Scene(root1));
         windows.put(window,stage);
         stage.show();

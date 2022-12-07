@@ -14,3 +14,36 @@
     -fx-border-width: 2px;
     -fx-text-color: #FFFFFF;
 }
+.btnClose{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+.btnClose:hover{
+    -fx-background-color: #E81123;
+    -fx-background-radius: 0;
+}
+.icon-Close{
+}
+.icon-Close:hover{
+    -fx-icon-color: #ffffff;
+}
+.btnMaximize{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+.btnMaximize:hover{
+    -fx-background-color: #E9E9E9;
+    -fx-background-radius: 0;
+}
+.btnMinimize{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+.btnMinimize:hover{
+    -fx-background-color: #E9E9E9;
+    -fx-background-radius: 0;
+}
+.tile-type1{
+    -fx-background-color: #FBFBFB;
+    -fx-background-radius: 20;
+}
