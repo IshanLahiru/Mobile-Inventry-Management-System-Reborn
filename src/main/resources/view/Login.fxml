@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -24,7 +26,7 @@
           <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="72.39999999999998" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <GridPane fx:id="gridUtilities" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="310.0" style="-fx-background-color: yellow;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane fx:id="gridUtilities" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="310.0" styleClass="tile-type1" stylesheets="@../style/LightMode.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="16.0" minWidth="16.0" prefWidth="16.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
@@ -131,4 +133,37 @@
          </children>
       </GridPane>
    </center>
+   <top>
+      <GridPane prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnMin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMinOnAction" styleClass="btnMinimize" stylesheets="@../style/LightMode.css" GridPane.columnIndex="2">
+               <graphic>
+                  <FontIcon fx:id="iconMin" iconLiteral="gmi-remove" iconSize="12" textAlignment="CENTER" wrappingWidth="31.999967575073242" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnMax" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMaxOnAction" styleClass="btnMaximize" stylesheets="@../style/LightMode.css" GridPane.columnIndex="3">
+               <graphic>
+                  <FontIcon fx:id="iconMax" iconLiteral="gmi-check-box-outline-blank" iconSize="12" textAlignment="CENTER" wrappingWidth="26.400023460388184" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnClose" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCloseOnAction" styleClass="btnClose" stylesheets="@../style/LightMode.css" GridPane.columnIndex="4">
+               <graphic>
+                  <FontIcon fx:id="iconClose" boundsType="LOGICAL_VERTICAL_CENTER" iconLiteral="gmi-close" iconSize="12" styleClass="icon-Close" text="" textAlignment="CENTER" wrappingWidth="30.400084972381592" />
+               </graphic>
+            </Button>
+            <ImageView fx:id="imgTitleIcon" fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="lblTitle" text=" Login" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+   </top>
 </BorderPane>

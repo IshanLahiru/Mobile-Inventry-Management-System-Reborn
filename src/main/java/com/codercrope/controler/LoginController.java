@@ -3,6 +3,7 @@ package com.codercrope.controler;
 import com.codercrope.controler.components.ComponentCotnroller;
 import com.codercrope.util.Navigation;
 import com.codercrope.util.Navigations;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,9 @@ import static com.codercrope.util.Windows.RESET_PWD;
 
 public class LoginController implements WindowController{
 
+    public Button btnMin;
+    public Button btnMax;
+    public Button btnClose;
     @FXML
     private GridPane gridUtilities;
 
@@ -72,5 +76,14 @@ public class LoginController implements WindowController{
     @Override
     public void performeActions(String text, Event actionEvent, String txt) throws IOException {
 
+    }
+
+    public void btnMinOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnMaxOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnCloseOnAction(ActionEvent actionEvent) {
     }
 }

@@ -1,4 +1,4 @@
-package com.codercrope.controler.components.text.txt;
+package com.codercrope.controler.components.text;
 
 import com.codercrope.controler.WindowController;
 import com.codercrope.controler.components.ComponentCotnroller;

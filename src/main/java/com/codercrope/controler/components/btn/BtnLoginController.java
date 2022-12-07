@@ -1,4 +1,4 @@
-package com.codercrope.controler.components.text.btn;
+package com.codercrope.controler.components.btn;
 
 import com.codercrope.controler.WindowController;
 import com.codercrope.controler.components.ComponentCotnroller;
