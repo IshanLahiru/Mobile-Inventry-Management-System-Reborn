@@ -14,6 +14,8 @@
     -fx-border-width: 2px;
     -fx-text-color: #FFFFFF;
 }
+
+/*the styling of the top navigatiion bar in the main pages top portion*/
 .btnClose{
     -fx-background-color: transparent;
     -fx-background-radius: 0;
@@ -46,4 +48,20 @@
 .tile-type1{
     -fx-background-color: #FBFBFB;
     -fx-background-radius: 20;
+}
+.searchField-text{
+    -fx-background-color: transparent;
+}
+.searchField-outerBox{
+    -fx-background-color: transparent;
+    -fx-border-color: #000000;
+    -fx-border-radius: 30;
+}
+.back_forword_Button{
+    -fx-background-color: transparent;
+}
+.file_menu_items{
+    -fx-background-color: transparent;
+    -fx-border-radius: 0;
+    -fx-border-width: 0;
 }

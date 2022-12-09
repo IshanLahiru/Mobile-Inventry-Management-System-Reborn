@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<GridPane maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.codercrope.controler.components.MainWindowTopBarController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane prefHeight="0.0" prefWidth="600.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="2.0" minWidth="2.0" prefWidth="2.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="2.0" minWidth="2.0" prefWidth="2.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="0.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="152.40004882812502" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="0.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="48.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btnMin" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMinOnAction" styleClass="btnMinimize" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="9">
+               <graphic>
+                  <FontIcon fx:id="iconMin" iconLiteral="gmi-remove" iconSize="17" text="" textAlignment="CENTER" wrappingWidth="31.999967575073242" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnMax" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnMaxOnAction" styleClass="btnMaximize" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="10">
+               <graphic>
+                  <FontIcon fx:id="iconMax" iconLiteral="gmi-check-box-outline-blank" iconSize="13" text="" textAlignment="CENTER" wrappingWidth="26.400023460388184" />
+               </graphic>
+            </Button>
+            <Button fx:id="btnClose" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCloseOnAction" styleClass="btnClose" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="11">
+               <graphic>
+                  <FontIcon fx:id="iconClose" boundsType="LOGICAL_VERTICAL_CENTER" iconLiteral="gmi-close" iconSize="17" styleClass="icon-Close" text="" textAlignment="CENTER" wrappingWidth="30.400084972381592" />
+               </graphic>
+            </Button>
+            <ImageView fx:id="imgTitleIcon" fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+               <image>
+                  <Image url="@../../asset/pageIcon.png" />
+               </image></ImageView>
+            <Label fx:id="lblTitle" maxHeight="1.7976931348623157E308" prefHeight="30.0" prefWidth="78.0" text="Codercrope" GridPane.columnIndex="3" />
+            <GridPane GridPane.columnIndex="7">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="2.0" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="1.7976931348623157E308" minHeight="4.799993896484375" prefHeight="4.799993896484375" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="2.0" minHeight="2.0" prefHeight="2.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane prefHeight="30.0" prefWidth="228.0" styleClass="searchField-outerBox" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="150.20001220703125" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="15.0" minWidth="15.0" prefWidth="15.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="1.7976931348623157E308" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <TextField maxHeight="20.0" maxWidth="1.7976931348623157E308" promptText="Search here.." styleClass="searchField-text" stylesheets="@../../style/LightMode.css" />
+                        <Label prefHeight="16.0" prefWidth="6.0" GridPane.columnIndex="1">
+                           <graphic>
+                              <FontIcon iconLiteral="bi-search" iconSize="13" text="" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="5">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="25.0" minWidth="25.0" prefWidth="25.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label GridPane.columnIndex="1" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="back_forword_Button" stylesheets="@../../style/LightMode.css">
+                     <graphic>
+                        <FontIcon boundsType="VISUAL" iconLiteral="bi-arrow-left-short" iconSize="15" text="" textAlignment="CENTER" wrappingWidth="20.600037527085078" />
+                     </graphic>
+                  </Button>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="back_forword_Button" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="1">
+                     <graphic>
+                        <FontIcon boundsType="LOGICAL_VERTICAL_CENTER" iconLiteral="bi-arrow-right" iconSize="15" text="" />
+                     </graphic>
+                  </Button>
+               </children>
+            </GridPane>
+            <MenuBar prefHeight="26.0" prefWidth="141.0" styleClass="file_menu_items" stylesheets="@../../style/LightMode.css" GridPane.columnIndex="4">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Import Database File" />
+                        <MenuItem mnemonicParsing="false" text="Export Database File" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Edit Business Details" />
+                        <MenuItem mnemonicParsing="false" text="Edit Customer Details" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

@@ -7,7 +7,7 @@ public class RegxValidator {
 
     public static boolean checkRegex(String s, String task) {
         switch (s) {
-            case "TXT_NAME":
+            case "TXT_USER_PWD":
                 Pattern userNamePattern = Pattern.compile("^[a-z0-9]{4,}$");
                 Matcher matcher = userNamePattern.matcher(task);
                 return matcher.matches();

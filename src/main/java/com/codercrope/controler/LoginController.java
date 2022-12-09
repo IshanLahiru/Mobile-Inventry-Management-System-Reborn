@@ -1,8 +1,7 @@
 package com.codercrope.controler;
 
 import com.codercrope.controler.components.ComponentCotnroller;
-import com.codercrope.util.Navigation;
-import com.codercrope.util.Navigations;
+import com.codercrope.util.*;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -10,8 +9,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
 
@@ -23,6 +24,11 @@ public class LoginController implements WindowController{
     public Button btnMin;
     public Button btnMax;
     public Button btnClose;
+    public FontIcon iconMin;
+    public FontIcon iconMax;
+    public FontIcon iconClose;
+    public ImageView imgTitleIcon;
+    public Label lblTitle;
     @FXML
     private GridPane gridUtilities;
 
@@ -41,30 +47,16 @@ public class LoginController implements WindowController{
 
         lblWrongEmail.setVisible(false);
 
-        ComponentCotnroller controller = getAndLoadButton(1, 6);
-        controller.setController("Login", (WindowController) this, "TASK_PRINT");
+        ComponentCotnroller controller = ComponentLoader.getAndLoadButton(gridUtilities,1, 6);
+        controller.setController("Login", (WindowController) this, "LOGIN_OPERATION");
 
-        ComponentCotnroller controller1 = getAndLoadTextBox(1, 2);
-        controller1.setController("Add", (WindowController) this, "TASK_PRINT");
+        ComponentCotnroller controller1 = ComponentLoader.getAndLoadTextBox(gridUtilities, 1, 2);
+        controller1.setController("Add", (WindowController) this, "TXT_EMAIL");
 
-        ComponentCotnroller controller2 = getAndLoadTextBox(1, 4);
-        controller2.setController("Add", (WindowController) this, "TASK_PRINT");
+        ComponentCotnroller controller2 = ComponentLoader.getAndLoadTextBox(gridUtilities, 1, 4);
+        controller2.setController("Add", (WindowController) this, "TXT_USER_PWD");
     }
 
-    public ComponentCotnroller getAndLoadButton(int column, int row) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/btn/BtnLogin.fxml"));
-        Button root1 = (Button) fxmlLoader.load();
-        ComponentCotnroller controller = (ComponentCotnroller) fxmlLoader.getController();
-        gridUtilities.add(root1, column, row);
-        return controller;
-    }
-    public ComponentCotnroller getAndLoadTextBox(int column, int row) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/text/TxtField.fxml"));
-        TextField root1 = (TextField) fxmlLoader.load();
-        ComponentCotnroller controller = (ComponentCotnroller) fxmlLoader.getController();
-        gridUtilities.add(root1, column, row);
-        return controller;
-    }
 
     @FXML
     void lblReserPwdOnMouseClick(MouseEvent event) throws IOException {
@@ -74,8 +66,31 @@ public class LoginController implements WindowController{
     }
 
     @Override
-    public void performeActions(String text, Event actionEvent, String txt) throws IOException {
-
+    public void performeActions(String task, Event actionEvent, String txtText) throws IOException {
+        if (task != null) {
+            switch (task) {
+                case "TXT_USER_PWD":
+                    boolean val = RegxValidator.checkRegex(task, txtText);
+                    if (!val){
+                        System.out.println("invalid password");
+                    }else{
+                        System.out.println("valid password");
+                    }
+                    break;
+                case "TXT_EMAIL":
+                    boolean val1 = RegxValidator.checkRegex(task, txtText);
+                    if (!val1){
+                        System.out.println("Invalid email");
+                    }else{
+                        System.out.println("Valid email");
+                    }
+                    break;
+                case "LOGIN_OPERATION":
+                    Navigations.nav.navigate(Windows.MAIN_WINDOW);
+                    System.out.println("this is the main window");
+                    break;
+            }
+        }
     }
 
     public void btnMinOnAction(ActionEvent actionEvent) {

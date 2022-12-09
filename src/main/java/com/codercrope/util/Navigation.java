@@ -72,6 +72,24 @@ public class Navigation {
                     closeWindowsExcept(RESET_PWD);*/
                 }
                 break;
+            case MAIN_WINDOW:
+                if (windows.containsKey(MAIN_WINDOW)) {
+                    System.out.println("returning the previous made main window");
+                    windows.get(MAIN_WINDOW).show();
+                }else{
+                    initWindow("MainWindow.fxml",MAIN_WINDOW);
+                    /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/ResetPwd.fxml"));
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    //((ItemMoreDetailViewController) fxmlLoader.getController()).getObject(item.getOb());
+                    System.out.println("Initializing reset pwd 2 ");
+                    Stage stage = new Stage();
+                    stage.setTitle("Window2");
+                    stage.setScene(new Scene(root1));
+                    windows.put(RESET_PWD,stage);
+                    stage.show();
+                    closeWindowsExcept(RESET_PWD);*/
+                }
+                break;
         }
     }
 
